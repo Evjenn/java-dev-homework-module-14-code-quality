@@ -86,11 +86,11 @@ public class GameApp {
 
     public static byte checkWinner(char[] box){
         byte winner = 0;
-        if (playerWin(box)){winner = 1;}
-        else
-        if (aiWin(box)){winner = 2;}
-        else
-        if (!boardStatus(box)) {
+        if (playerWin(box)) {
+            winner = 1;
+        } else if (aiWin(box)) {
+            winner = 2;
+        } else if (!boardStatus(box)) {
             winner = 3;
         }
         return winner;
